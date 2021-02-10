@@ -22,6 +22,8 @@ module.exports = {
   },
   devtool: 'cheap-module-eval-source-map',
   devServer: {
-    contentBase: path.join(__dirname, 'public')
+    contentBase: path.join(__dirname, 'public'),
+    //this tells server that we are handling client-seide routing adn any 404 found, should be redirected to index.html
+    historyApiFallback: true 
   }
 };
